@@ -8,6 +8,8 @@ const config = require('./db');
 const Course = require('./Models/Course');
 const CourseRoute = require('./Routes/CourseRoute');
 
+const cors = require('cors');
+
 const PORT = 4000;
 
 mongoose.connect(config.DB).then(
@@ -18,6 +20,7 @@ mongoose.connect(config.DB).then(
 
 
 app.use(bodyParser.json());
+app.use(cors({ origin: true }));
 app.use('/course', CourseRoute);
 
 
