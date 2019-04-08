@@ -11,8 +11,15 @@ var Course = new Schema({
     },
     course_price: {
       type: Number
+    },
+    course_msg: {
+      type:String
+    },
+    course_email:{
+      type:String
     }
-  },{
+  }
+  ,{
       collection: 'courses'
   });
 

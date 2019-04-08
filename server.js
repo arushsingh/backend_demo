@@ -15,8 +15,12 @@ mongoose.connect(config.DB).then(
     err => { console.log('Can not connect to the database' +err)
 });
 
+
+
 app.use(bodyParser.json());
 app.use('/course', CourseRoute);
+
+
 
 app.listen(PORT, function(){
     console.log('Your node js server is running on PORT:',PORT);
